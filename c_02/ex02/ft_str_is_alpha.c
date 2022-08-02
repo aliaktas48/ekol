@@ -6,7 +6,7 @@
 /*   By: aaktas <aaktas@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 11:51:26 by aaktas            #+#    #+#             */
-/*   Updated: 2022/07/31 12:36:10 by aaktas           ###   ########.fr       */
+/*   Updated: 2022/08/02 16:08:02 by aaktas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_str_is_alpha(char *str)
 	}
 	while (str[i] != '\0')
 	{
-		if (str[i] >= 'A' && str [i] <= 'Z' || str[i] >= 'a' && str [i] <= 'z')
+		if ((str[i] < 'A' || str [i] > 'Z') && (str[i] < 'a' || str [i] > 'z'))
 			i++;
 		else
 			return (0);
