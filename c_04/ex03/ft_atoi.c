@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaktas <aaktas@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/03 13:49:32 by aaktas            #+#    #+#             */
-/*   Updated: 2022/08/03 17:28:16 by aaktas           ###   ########.fr       */
+/*   Created: 2022/08/06 19:00:25 by aaktas            #+#    #+#             */
+/*   Updated: 2022/08/07 12:50:09 by aaktas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strstr(char *str, char *to_find)
+int	ft_atoi(char *str)
 {
+	int	result;
 	int	i;
-	int	g;
+	int	count;
 
+	count = 1;
+	result = 0;
 	i = 0;
-	g = 0;
-	if (to_find[g] == '\0')
-		return (str);
-	while (str[i] != '\0')
-	{
-		while (str[i + g] == to_find[g] && str[i + g] != '\0')
-			g++;
-		if (to_find[g] == '\0')
-			return (str + i);
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
 		i++;
-		g = 0;
+	while (str[i] == 43 || str[i] == 45)
+	{
+		if (str[i] == 45)
+			count *= -1;
+		i++;
 	}
-	return (0);
+	while (str[i] >= 48 && str[i] <= 57)
+	{
+		result = (str[i] - 48) + (result * 10);
+		i++;
+	}
+	return (result);
 }

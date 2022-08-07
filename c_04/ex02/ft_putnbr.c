@@ -6,7 +6,7 @@
 /*   By: aaktas <aaktas@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 15:48:45 by aaktas            #+#    #+#             */
-/*   Updated: 2022/08/04 15:55:09 by aaktas           ###   ########.fr       */
+/*   Updated: 2022/08/06 18:59:03 by aaktas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,14 @@ void	ft_putnbr(int nb)
 		w = nb + 48;
 		ft_putchar(w);
 	}
+	else if (nb < 0)
+	{
+		ft_putchar('-');
+		ft_putnbr(nb * -1);
+	}
+	else
+	{
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
+	}
+}

@@ -6,11 +6,9 @@
 /*   By: aaktas <aaktas@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 17:43:42 by aaktas            #+#    #+#             */
-/*   Updated: 2022/08/02 18:21:31 by aaktas           ###   ########.fr       */
+/*   Updated: 2022/08/03 13:48:13 by aaktas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {

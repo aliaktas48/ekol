@@ -6,11 +6,9 @@
 /*   By: aaktas <aaktas@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 18:28:14 by aaktas            #+#    #+#             */
-/*   Updated: 2022/08/02 18:42:56 by aaktas           ###   ########.fr       */
+/*   Updated: 2022/08/03 13:48:38 by aaktas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 char	*ft_strcat(char *dest, char *src)
 {
